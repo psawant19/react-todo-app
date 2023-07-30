@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button } from "react-bootstrap";
+import "./App.css";
+import TodoListGroup from "./Components/TodoListGroup";
 
 function App() {
+  var groups = [
+    {
+      id: 1,
+      title: "Group1",
+      data: ["Grp1 Item1", "Grp1 Item2", "Grp1 Item3", "Grp1 Item4"],
+    },
+    {
+      id: 2,
+      title: "Group2",
+      data: ["Grp2 Item1", "Grp2 Item2", "Grp2 Item3", "Grp2 Item4"],
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Button onClick={() => alert("You clicked")}>ADD NOTE</Button>
+        <TodoListGroup groups={groups}></TodoListGroup>
       </header>
+      <body></body>
     </div>
   );
 }
