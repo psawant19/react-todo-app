@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { ListGroup } from "react-bootstrap";
 
 class Todo extends Component {
-  state = {};
   render() {
-    return <p>{this.props.value}</p>;
+    return <ListGroup.Item>{this.props.value}</ListGroup.Item>;
   }
 }
 
